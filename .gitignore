@@ -111,4 +111,4 @@ wp-content/mysql.sql
 *.avi
 
 # Node modules
-/node_modules
+node_modules/
