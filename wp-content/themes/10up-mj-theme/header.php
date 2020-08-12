@@ -16,5 +16,3 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-<h1><?php the_title(); ?></h1>
