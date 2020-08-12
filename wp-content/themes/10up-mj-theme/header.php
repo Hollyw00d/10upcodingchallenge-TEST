@@ -18,3 +18,14 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<nav>
+<?php wp_nav_menu( array( 
+	'sort_column' => 'menu_order', 
+	'container_class' => 'menu-header', 
+	'menu_class' => 'nav', 
+    'container' => false
+));
+?>
+</nav>
+
