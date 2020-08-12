@@ -1,9 +1,9 @@
 <?php 
 get_header(); 
 
-// Determiner if on the blog page
+// Determine if on the blog page, EXCEPT for single page
 function is_blog() {
-    return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag()) && 'post' == get_post_type();
+    return ( is_archive() || is_author() || is_category() || is_home() || is_tag()) && 'post' == get_post_type();
 }
 ?>
 
@@ -17,7 +17,6 @@ function is_blog() {
         echo '<h1>' . get_the_title() . '</h1>';
         the_content();
     else:
-
         the_title();
         the_content(); 
     endif; 
