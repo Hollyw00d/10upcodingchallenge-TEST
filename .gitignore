@@ -1,14 +1,17 @@
 # Ignore everything in the root 
-# except the .gitignore and the "wp-content" directory
+# except the .gitignore and specific plugins and themes 
+# in "wp-content"
 /*
 !.gitignore
 !README.md
 
-# Custom plugins
-!wp-content/plugins/custom-plugin
+wp-content/*
+!wp-content/mu-plugins
+!wp-content/plugins
+!wp-content/themes
 
-# Custom mu plugins
-!wp-content/mu-plugins/custom-mu-plugin
+wp-content/plugins/*
+!wp-content/plugins/my-plugin
 
-# Custom themes
+wp-content/themes/*
 !wp-content/themes/10up-mj-theme
