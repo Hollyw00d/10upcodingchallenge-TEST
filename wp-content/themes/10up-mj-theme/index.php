@@ -14,7 +14,7 @@ function is_blog() {
             the_post_thumbnail();
         echo '</div>';
         echo get_the_date();
-        echo '<h1>' . get_the_title() . '</h1>';
+        echo '<h1><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h1>';
         the_content();
     else:
         the_title();
