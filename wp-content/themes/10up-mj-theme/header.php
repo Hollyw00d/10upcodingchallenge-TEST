@@ -9,6 +9,7 @@
 
     <title><?php wp_title(); ?></title>
 
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/normalize.css" type="text/css" />    
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
