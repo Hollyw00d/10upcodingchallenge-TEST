@@ -10,6 +10,7 @@
     <title><?php wp_title(); ?></title>
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/normalize.css" type="text/css" />    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
