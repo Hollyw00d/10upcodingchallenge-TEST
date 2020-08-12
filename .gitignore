@@ -109,3 +109,6 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
+
+# Node modules
+/node_modules
