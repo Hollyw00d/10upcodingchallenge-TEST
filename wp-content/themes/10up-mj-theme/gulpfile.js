@@ -11,7 +11,7 @@ const cleanCSS = require('gulp-clean-css');
 const sass = require('gulp-sass');
 
 // Theme path modules
-const tenUpThemePath = 'wp-content/themes/10up-mj-theme';
+const tenUpThemePath = './';
 
 gulp.task('js', () => {
     return gulp.src([
