@@ -57,6 +57,7 @@ p {
     height: 53px;
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
 
   #logo-wrapper {
@@ -92,14 +93,31 @@ p {
     border: 0;
     margin-left: auto;
     background: transparent;
+    padding: 0 20px;
 
     img {
+      display: none;
+    }
+
+    img.active {
       display: inline-block;
       border: 0;
       height: 19px;
       margin-left: auto;
     }
   }
+
+  .searchform {
+    position: absolute;
+    right: 20px;
+    top: 53px;
+    display: none;
+  }
+
+  .searchform.active {
+    display: block;
+  }
+
   // Header top are with logo and search button END
 
   // Nav
