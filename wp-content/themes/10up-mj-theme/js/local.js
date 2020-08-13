@@ -1,4 +1,30 @@
 jQuery(document).ready(function($) {
+  // Close search box
+  function closeSearchBox() {
+    $('#search').removeClass('expanded med-blue-bg');
+  
+    $('#search').attr({
+      'aria-expanded': 'false',
+      'aria-pressed': 'false'
+    }); 
+  
+    $('#search').next().removeClass('active'); 
+  }
+
+  // Close nav
+  function closeNav() {
+    $('.mobile-nav-btn').attr({
+      'aria-expanded': 'false',
+      'aria-pressed': 'false'
+    }); 
+
+    $('.mobile-nav-btn').removeClass('med-blue-bg');
+
+    $('.mobile-nav-btn').find('img.open').addClass('active');
+    $('.mobile-nav-btn').find('img.close').removeClass('active');
+
+    $('#menu-primary').removeClass('active');
+  }
 
   // Show open/close of search button
   $('#search').on('click', function() {
@@ -13,6 +39,8 @@ jQuery(document).ready(function($) {
 
       $(this).next().addClass('active');
 
+      closeNav();
+
     } else {
       $(this).attr({
         'aria-expanded': 'false',
@@ -22,6 +50,8 @@ jQuery(document).ready(function($) {
       $(this).removeClass('med-blue-bg');
       
       $(this).next().removeClass('active');
+
+      closeNav();
 
     }
   });
@@ -42,6 +72,8 @@ jQuery(document).ready(function($) {
 
       $('#menu-primary').addClass('active');
 
+      closeSearchBox();
+
     } else {
       $(this).attr({
         'aria-expanded': 'false',
@@ -54,6 +86,8 @@ jQuery(document).ready(function($) {
       $(this).find('img.close').removeClass('active');
 
       $('#menu-primary').removeClass('active');
+
+      closeSearchBox();
     }
   });  
 
@@ -61,14 +95,8 @@ jQuery(document).ready(function($) {
     var width = $(window).width();
 
     if(width <= 1050) {
-      $('#search').removeClass('expanded med-blue-bg');
-
-      $('#search').attr({
-        'aria-expanded': 'false',
-        'aria-pressed': 'false'
-      }); 
-
-      $('#search').next().removeClass('active'); 
+      closeSearchBox();
+      closeNav();
     }
 
   });
