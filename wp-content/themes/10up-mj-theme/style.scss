@@ -96,14 +96,29 @@ p {
     padding: 0 20px;
 
     img {
-      display: none;
-    }
-
-    img.active {
       display: inline-block;
       border: 0;
       height: 19px;
       margin-left: auto;
+    }
+
+    img.open {
+      display: inline-block;
+    }
+
+    img.close {
+      display: none;
+    }
+
+  }
+
+  #search.expanded {
+    img.open {
+      display: none;
+    }
+
+    img.close {
+      display: inline-block;
     }
   }
 

@@ -39,7 +39,8 @@ $large_rand_num_accessibility = rand(1000, 1999);
                     </a>
                 </div>
                 <button id="search" aria-label="Search website" aria-expanded="false" aria-pressed="false" id="search-btn-<?php echo $large_rand_num_accessibility; ?>" aria-controls="search-form-<?php echo $large_rand_num_accessibility; ?>">
-                    <img class="active" src="<?php echo get_template_directory_uri(); ?>/images/icons/search-white.svg" alt="" />
+                    <img class="active open" src="<?php echo get_template_directory_uri(); ?>/images/icons/search-white.svg" alt="" />
+                    <img class="close" src="<?php echo get_template_directory_uri(); ?>/images/icons/close-white.svg" alt="" />
                 </button>
                 <?php include(plugin_dir_path( __FILE__ ) . 'inc/search-form.php'); ?>
             </div>
