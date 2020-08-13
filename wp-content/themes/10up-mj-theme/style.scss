@@ -7,10 +7,14 @@ Author URI: http://mattjennings.net
 Version: 1
 */
 
-// Body and font family
+// Body, font family, and colors
 body {
   font-family: 'Raleway', sans-serif;
   color: #333333;
+}
+
+.med-blue-bg {
+  background: #004eae;
 }
 
 // Headings
@@ -22,12 +26,13 @@ h1 {
 #header {
   background: #006ef5;
 
-  #wrapper-header-inner {
+  .wrapper-header-inner {
     max-width: 1120px;
-    padding: 0 40px 40px;
+    padding: 0 40px;
     margin: 0 auto;
   }
   
+  // Header top are with logo and search button START
   #header-top-light-blue {
     height: 53px;
     display: flex;
@@ -36,20 +41,29 @@ h1 {
 
   #logo-wrapper {
     height: 100%;
-    display: inline-flex;
-    align-items: center;
 
-    #logo {
-      height: 33px;
-    }
-    
+    a {
+      display: inline-flex;
+      align-items: center;
 
-    h1 {
-      color: #fff;
-      font-weight: 500;
-      font-size: 20px;
-      padding-left: 15px;
+      &:link, &:visited,
+      &:hover, &:active {
+        text-decoration: none;
+      }
+
+      #logo {
+        height: 33px;
+      }
+      
+  
+      h1 {
+        color: #fff;
+        font-weight: 500;
+        font-size: 20px;
+        padding-left: 15px;
+      }
     }
+
 
   }
 
@@ -58,13 +72,53 @@ h1 {
     border: 0;
     margin-left: auto;
     background: transparent;
-  }
 
-  #search img {
-    display: inline-block;
-    border: 0;
-    height: 19px;
-    margin-left: auto;
+    img {
+      display: inline-block;
+      border: 0;
+      height: 19px;
+      margin-left: auto;
+    }
+  }
+  // Header top are with logo and search button END
+
+  // Nav
+  #menu-primary {
+    font-size: 18px;
+    max-width: 1120px;
+    margin: 0 auto;
+    height: 55px;
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline-flex;
+      height: 100%;
+      align-items: center;
+      padding: 0 20px;
+
+      a {
+        &:link, &:visited {
+          color: #fff;
+        }
+        &:hover, &:active {
+          color: #ffc700;
+        }
+      }
+      
+    }
+    li.current-menu-item {
+      background: #013371;
+
+      a {
+        &:link, &:visited,
+        &:hover, &:active {
+          color: #ffc700;
+        }
+      }
+
+    }
+
   }
 
 }
