@@ -6,3 +6,56 @@ Author: Matt Jennings
 Author URI: http://mattjennings.net
 Version: 1
 */
+
+// Body and font family
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #333333;
+}
+
+// Headings
+h1 {
+  font-size: 36px;
+}
+
+// Header
+#header {
+  background: #006ef5;
+
+  #wrapper-header-inner {
+    max-width: 1120px;
+    padding: 0 40px 40px;
+    margin: 0 auto;
+  }
+  
+  #header-top-light-blue {
+    height: 53px;
+  }
+
+  #logo-wrapper {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+
+    #logo {
+      height: 33px;
+    }
+    
+    h1 {
+      color: #fff;
+      font-weight: 500;
+      font-size: 20px;
+      padding-left: 15px;
+    }
+
+  }
+
+
+}
+
+// Content area
+#wrapper-content {
+  max-width: 1120px;
+  padding: 0 40px 40px;
+  margin: 0 auto;
+}

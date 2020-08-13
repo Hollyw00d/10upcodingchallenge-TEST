@@ -10,7 +10,7 @@
     <title><?php wp_title(); ?></title>
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/normalize.css" type="text/css" />    
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -21,13 +21,33 @@
 
 <body <?php body_class(); ?>>
 
-<nav>
-<?php wp_nav_menu( array( 
-	'sort_column' => 'menu_order', 
-	'container_class' => 'menu-header', 
-	'menu_class' => 'nav', 
-    'container' => false
-));
-?>
-</nav>
+<header>
+<div id="header">
 
+<div id="wrapper-header-inner">
+
+    <div id="header-top-light-blue">
+
+        <div id="logo-wrapper">
+            <img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" />
+            <h1>Eats.</h1>
+        </div>
+    </div>
+
+    <nav>
+    <?php wp_nav_menu( array( 
+        'sort_column' => 'menu_order', 
+        'container_class' => 'menu-header', 
+        'menu_class' => 'nav', 
+        'container' => false
+    ));
+    ?>
+    </nav>
+
+    </div>
+
+</div>
+
+</header>
+
+<div id="wrapper-content">
