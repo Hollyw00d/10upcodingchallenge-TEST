@@ -31,6 +31,10 @@ $large_rand_num_accessibility = rand(1000, 1999);
         <div class="wrapper-header-inner">
 
             <div id="header-top-light-blue">
+                <button class="mobile-nav-btn" aria-label="Navigation" aria-expanded="false" aria-pressed="false" id="nav-btn-<?php echo $large_rand_num_accessibility; ?>" aria-controls="nav-menu-<?php echo $large_rand_num_accessibility; ?>">
+                    <img class="active open" src="<?php echo get_template_directory_uri(); ?>/images/icons/menu-white.svg" alt="" />
+                    <img class="close" src="<?php echo get_template_directory_uri(); ?>/images/icons/close-white.svg" alt="" />
+                </button>
 
                 <div id="logo-wrapper">
                     <a href="<?php echo get_home_url(); ?>">
@@ -49,7 +53,7 @@ $large_rand_num_accessibility = rand(1000, 1999);
 
         <div class="med-blue-bg">
             <div class="wrapper-header-inner">
-                <nav>
+                <nav aria-labelledby="nav-btn-<?php echo $large_rand_num_accessibility; ?>" id="nav-menu-<?php echo $large_rand_num_accessibility; ?>">
                     <?php wp_nav_menu( array( 
                         'sort_column' => 'menu_order', 
                         'container_class' => 'menu-header', 
