@@ -9,15 +9,20 @@ jQuery(document).ready(function($) {
         'aria-pressed': 'true'
       });
 
-      $(this).next().addClass('active');
+      $(this).addClass('med-blue-bg');
+
+      $(this).next().addClass('active med-blue-bg');
 
     } else {
       $(this).attr({
         'aria-expanded': 'false',
         'aria-pressed': 'false'
       });  
+
+      $(this).removeClass('med-blue-bg');
       
-      $(this).next().removeClass('active');
+      $(this).next().removeClass('active med-blue-bg');
+
     }
   });
 

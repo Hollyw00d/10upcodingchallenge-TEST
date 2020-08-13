@@ -19,7 +19,7 @@ body {
 }
 
 .med-blue-bg {
-  background: #004eae;
+  background: #004eae !important;
 }
 
 a {
@@ -109,7 +109,6 @@ p {
     img.close {
       display: none;
     }
-
   }
 
   #search.expanded {
@@ -124,13 +123,26 @@ p {
 
   .searchform {
     position: absolute;
-    right: 20px;
-    top: 53px;
+    right: 0;
+    top: 73px;
     display: none;
+    padding: 20px;
+    width: 360px;
+
+    .screen-reader-text {
+      text-indent: -9999px;
+      position: absolute;
+    }
+
+    input[type='text'] {
+      width: 100%;
+      padding: 10px;
+    }
+
   }
 
   .searchform.active {
-    display: block;
+    display: flex;
   }
 
   // Header top are with logo and search button END
