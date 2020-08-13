@@ -17,7 +17,7 @@ function is_blog() {
             echo '<div>';
                 echo '<p class="med-gray">' .  get_the_date() . '</p>';
                 echo '<h1><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h1>';
-                the_content();
+                the_excerpt();
             echo '</div>';
             echo '<p><a class="read-more" href="' . get_the_permalink() . '">Read More<img src="' . get_template_directory_uri() . '/images/icons/cheveron-right-orange.svg" alt="" /></a></p>';
         echo '</div>';
