@@ -29,9 +29,13 @@
     <div id="header-top-light-blue">
 
         <div id="logo-wrapper">
-            <img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" />
+            <img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Burger Eat Logo" />
             <h1>Eats.</h1>
         </div>
+
+        <button id="search" aria-label="Search website">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/search-white.svg" alt="" />
+        </button>
     </div>
 
     <nav>

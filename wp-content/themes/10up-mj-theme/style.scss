@@ -30,6 +30,8 @@ h1 {
   
   #header-top-light-blue {
     height: 53px;
+    display: flex;
+    justify-content: space-between;
   }
 
   #logo-wrapper {
@@ -41,6 +43,7 @@ h1 {
       height: 33px;
     }
     
+
     h1 {
       color: #fff;
       font-weight: 500;
@@ -50,6 +53,19 @@ h1 {
 
   }
 
+  #search {
+    display: inline-block;
+    border: 0;
+    margin-left: auto;
+    background: transparent;
+  }
+
+  #search img {
+    display: inline-block;
+    border: 0;
+    height: 19px;
+    margin-left: auto;
+  }
 
 }
 
