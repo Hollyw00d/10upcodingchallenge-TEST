@@ -19,7 +19,7 @@ function is_blog() {
                 echo '<h1><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h1>';
                 the_content();
             echo '</div>';
-            echo '<p><a class="read-more" href="' . get_the_permalink() . '">Read More</a></p>';
+            echo '<p><a class="read-more" href="' . get_the_permalink() . '">Read More<img src="' . get_template_directory_uri() . '/images/icons/cheveron-right-orange.svg" alt="" /></a></p>';
         echo '</div>';
     else:
         echo '<h1>' . get_the_title() . '</h1>';

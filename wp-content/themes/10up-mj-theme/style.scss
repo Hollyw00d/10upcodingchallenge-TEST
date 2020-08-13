@@ -175,4 +175,14 @@ p {
     margin-top: 0;
   }
 
+  .read-more {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 22px;
+      margin-bottom: 0;
+    }
+
+  }
 }
