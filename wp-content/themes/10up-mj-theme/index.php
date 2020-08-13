@@ -10,15 +10,20 @@ function is_blog() {
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <?php if (is_blog()):
-        echo '<div>';
-            the_post_thumbnail();
+        echo '<div class="blog-wrapper">';
+            echo '<div class="blog-featured-image">';
+                    the_post_thumbnail();
+            echo '</div>';
+            echo '<div>';
+                echo '<p class="med-gray">' .  get_the_date() . '</p>';
+                echo '<h1><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h1>';
+                the_content();
+            echo '</div>';
+            echo '<p><a class="read-more" href="' . get_the_permalink() . '">Read More</a></p>';
         echo '</div>';
-        echo get_the_date();
-        echo '<h1><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h1>';
-        the_content();
     else:
-        the_title();
-        the_content(); 
+        echo '<h1>' . get_the_title() . '</h1>';
+        the_content();
     endif; 
     ?>
 
